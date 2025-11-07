@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function HeroComp() {
+function BeautifulStories() {
   return (
     <main className="flex h-[600px] w-full m-auto flex-row-reverse ">
       <div className=" text-black w-[45%]">
@@ -45,4 +45,4 @@ function HeroComp() {
   );
 }
 
-export default HeroComp;
+export default BeautifulStories;

@@ -36,7 +36,7 @@ const stories = [
   },
 ];
 
-function MiniStories() {
+function HomeStories() {
   return (
     <div className="flex">
       {stories.map((story, i) => {
@@ -85,4 +85,4 @@ function MiniStories() {
   );
 }
 
-export default MiniStories;
+export default HomeStories;

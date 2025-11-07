@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function MoreComp() {
+function DesignedForEveryOne() {
   return (
     <main className="flex h-[600px] w-full m-auto  ">
       <div className=" text-black w-[45%]">
@@ -44,4 +44,4 @@ function MoreComp() {
   );
 }
 
-export default MoreComp;
+export default DesignedForEveryOne;
