@@ -10,7 +10,7 @@ import {
 function Footer() {
   return (
     <footer className=" py-[3em] bg-black min-h-[200px]">
-      <section className="max-w-[1110px] py-[0.2em] h-[130px]  flex m-auto justify-between items-center px-3 ">
+      <section className="max-w-[1110px] py-[0.2em] h-[130px]  flex m-auto justify-between items-center  ">
         <div className="flex gap-[6em]  h-full">
           <div className="flex flex-col justify-between cursor-pointer">
             <Logo
