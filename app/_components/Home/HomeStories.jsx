@@ -50,7 +50,7 @@ function HomeStories() {
               quality={100}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               fill
-              className="object-cover"
+              className="object-cover brightness-70"
             />
             <div className="absolute top-[74%] m-auto flex flex-col gap-[1em] justify-start px-[3em] w-full">
               <div>
