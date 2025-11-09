@@ -82,7 +82,7 @@ function Cards({ details, isYearly }) {
             <Button
               style={`${
                 isPicked
-                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/95"
+                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85"
                   : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black"
               }`}
               click={() => changeDetails(option)}
