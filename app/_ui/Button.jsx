@@ -1,7 +1,11 @@
 "use client";
 
-function Button({ children, style }) {
-  return <button className={style}>{children}</button>;
+function Button({ children, style, click }) {
+  return (
+    <button className={style} onClick={click}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;

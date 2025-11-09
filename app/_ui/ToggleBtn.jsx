@@ -1,6 +1,6 @@
 import React from "react";
 
-function ToggleBtn() {
+function ToggleBtn({ isYearly, setIsYearly }) {
   return (
     <div>
       <label
@@ -11,20 +11,22 @@ function ToggleBtn() {
           type="checkbox"
           id="check"
           name="check"
-          //   checked={isDarkMode}
+          checked={isYearly}
           className="sr-only"
-          //   onChange={() => dispatch(themeToggle())}
+          onChange={() => setIsYearly(!isYearly)}
+          // onChange={() => setIsYearly((isYearly) => !isYearly)}
         />
 
-        <div className="relative translate-x-2 w-6 h-6 rounded-full bg-black transition-all ease-linear  duration-600"></div>
+        <div
+          className={`${
+            isYearly
+              ? "relative translate-x-4 w-7 h-7  rounded-full bg-black transition-all ease-linear  duration-300 hover:bg-white"
+              : "relative -translate-x-4 w-7 h-7 rounded-full bg-black transition-all ease-linear  duration-300 hover:bg-white"
+          }`}
+        ></div>
       </label>
     </div>
   );
 }
 
 export default ToggleBtn;
-// className={`${
-//     isDarkMode
-//       ? "relative translate-x-2 w-[15px] h-[15px] rounded-full bg-white transition-all ease-linear  duration-600"
-//       : "relative -translate-x-2 h-[15px] w-[15px] rounded-full bg-white  transition-all ease-linear duration-600"
-//   }`}
