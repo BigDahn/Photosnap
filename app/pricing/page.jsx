@@ -6,11 +6,14 @@ const Subscription = dynamic(() =>
 );
 const Beta = dynamic(() => import("../_components/Beta"));
 
+const Compare = dynamic(() => import("../_components/Pricing/ComparisonTable"));
+
 function page() {
   return (
     <div>
       <Hero />
       <Subscription />
+      <Compare />
       <Beta />
     </div>
   );
