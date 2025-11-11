@@ -1,5 +1,12 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const stories = [
   {
@@ -37,13 +44,31 @@ const stories = [
 ];
 
 function HomeStories() {
+  useGSAP(() => {
+    const storyLine = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#stories",
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart non restart none",
+      },
+    });
+
+    storyLine.from(".img", {
+      opacity: 0,
+      duration: 1,
+      stagger: 0.04,
+      ease: "power1.inOut",
+    });
+  });
+
   return (
-    <div className="flex">
+    <main id="stories" className="flex">
       {stories.map((story, i) => {
         const { title, author, image } = story;
         const { desktop, mobile } = image;
         return (
-          <div key={i} className="relative h-[500px] w-full">
+          <div key={i} className="relative h-[500px] w-full img">
             <Image
               src={desktop}
               alt={title}
@@ -81,7 +106,7 @@ function HomeStories() {
           </div>
         );
       })}
-    </div>
+    </main>
   );
 }
 

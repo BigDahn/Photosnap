@@ -2,6 +2,8 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const DMSans = DM_Sans({
   subsets: ["latin"],
@@ -19,10 +21,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${DMSans.className}  antialiased max-w-screen m-auto `}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={`${DMSans.className}  antialiased  `}>
+        <div className="max-w-screen ">
+          <Suspense fallback={<Loading />}>
+            <Header />
+            {children}
+            <Footer />
+          </Suspense>
+        </div>
       </body>
     </html>
   );

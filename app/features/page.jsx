@@ -1,16 +1,14 @@
-import dynamic from "next/dynamic";
-
-const Hero = dynamic(() => import("../_components/Features/Hero"));
-const Features = dynamic(() => import("../_components/Features/FullFeatures"));
-const Beta = dynamic(() => import("../_components/Beta"));
+import Beta from "../_components/Beta";
+import FullFeatures from "../_components/Features/FullFeatures";
+import Hero from "../_components/Features/Hero";
 
 function page() {
   return (
-    <div>
+    <>
       <Hero />
-      <Features />
+      <FullFeatures />
       <Beta />
-    </div>
+    </>
   );
 }
 

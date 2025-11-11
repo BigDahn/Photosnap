@@ -1,21 +1,16 @@
-import dynamic from "next/dynamic";
-
-const Hero = dynamic(() => import("../_components/Pricing/Hero"));
-const Subscription = dynamic(() =>
-  import("../_components/Pricing/Subscription")
-);
-const Beta = dynamic(() => import("../_components/Beta"));
-
-const Compare = dynamic(() => import("../_components/Pricing/ComparisonTable"));
+import Hero from "../_components/Pricing/Hero";
+import Subscription from "../_components/Pricing/Subscription";
+import Beta from "../_components/Beta";
+import ComparisonTable from "../_components/Pricing/ComparisonTable";
 
 function page() {
   return (
-    <div>
+    <>
       <Hero />
       <Subscription />
-      <Compare />
+      <ComparisonTable />
       <Beta />
-    </div>
+    </>
   );
 }
 

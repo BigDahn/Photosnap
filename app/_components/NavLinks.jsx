@@ -25,7 +25,7 @@ function NavLinks() {
           <Link
             key={i}
             href={href}
-            className="uppercase text-[12px] font-bold tracking-[2px] hover:text-black/50"
+            className="uppercase text-[12px] font-bold tracking-[2px] hover:text-black/50 hover:scale-[1.2] duration-200"
           >
             {name}
           </Link>

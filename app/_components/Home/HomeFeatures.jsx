@@ -1,4 +1,12 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
@@ -22,13 +30,40 @@ const features = [
 ];
 
 function HomeFeatures() {
+  const ScrollRef = useRef();
+
+  useGSAP(
+    () => {
+      const features = gsap.timeline({
+        scrollTrigger: {
+          trigger: ScrollRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          toggleActions: "restart non restart none",
+        },
+      });
+
+      features.from("#feature", {
+        x: 100,
+        opacity: 0,
+        stagger: 0.06,
+        duration: 1.1,
+      });
+    },
+    { scope: ScrollRef }
+  );
+
   return (
-    <section className="flex gap-x-[0.7em]  items-center justify-center py-[6em] max-w-[1110px]  m-auto">
+    <section
+      ref={ScrollRef}
+      className="flex gap-x-[0.7em]  items-center justify-center py-[6em] max-w-[1110px]  m-auto"
+    >
       {features.map((feature, index) => {
         const { title, content, image } = feature;
 
         return (
           <div
+            id="feature"
             key={index}
             className={`flex flex-col ${
               index === 0
