@@ -1,5 +1,6 @@
 "use client";
 
+import { features } from "@/app/_utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -8,33 +9,12 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const features = [
-  {
-    title: "100% Responsive",
-    content:
-      "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
-    image: "/assets/features/desktop/responsive.svg",
-  },
-  {
-    title: "No Photo Upload Limit",
-    content:
-      "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
-    image: "/assets/features/desktop/no-limit.svg",
-  },
-  {
-    title: "Available to Embed",
-    content:
-      "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ",
-    image: "/assets/features/desktop/embed.svg",
-  },
-];
-
 function HomeFeatures() {
   const ScrollRef = useRef();
 
   useGSAP(
     () => {
-      const features = gsap.timeline({
+      const feature = gsap.timeline({
         scrollTrigger: {
           trigger: ScrollRef.current,
           start: "top bottom",
@@ -43,7 +23,7 @@ function HomeFeatures() {
         },
       });
 
-      features.from("#feature", {
+      feature.from("#feature", {
         x: 100,
         opacity: 0,
         stagger: 0.06,

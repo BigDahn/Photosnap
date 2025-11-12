@@ -1,12 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import bg from "@/public/assets/stories/desktop/moon-of-appalacia.jpg";
 import Link from "next/link";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 function Hero() {
+  useGSAP(() => {
+    gsap.set(".hero", {
+      opacity: 0,
+      scale: 0,
+    });
+    gsap.to(".hero", {
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+      stagger: 0.06,
+    });
+  }, []);
+
   return (
-    <div className="relative h-[650px] w-full">
+    <div className="relative h-[725px] w-full">
       <Image src={bg} alt="hero" fill className="object-cover" quality={100} />
-      <div className="max-w-[387px] relative flex flex-col gap-[2em] justify-center ml-[6em] w-full  h-full">
+      <div className="max-w-[387px] relative flex flex-col gap-[2em] justify-center ml-[6em] w-full opacity-0 h-full hero">
         <h3 className="font-bold uppercase text-white text-[12px] tracking-[2px]">
           last month&apos;s featured story
         </h3>

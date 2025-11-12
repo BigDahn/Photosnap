@@ -1,5 +1,6 @@
 "use client";
 
+import { stories } from "@/app/_utils/constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -7,41 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const stories = [
-  {
-    title: "The Mountains",
-    author: "John Appleseed",
-    image: {
-      desktop: "/assets/stories/desktop/mountains.jpg",
-      mobile: "/assets/stories/mobile/mountains.jpg",
-    },
-  },
-  {
-    title: "Sunset Cityscapes",
-    author: "Benjamin Cruz",
-    image: {
-      desktop: "/assets/stories/desktop/cityscapes.jpg",
-      mobile: "/assets/stories/mobile/cityscapes.jpg",
-    },
-  },
-  {
-    title: "18 Days Voyage",
-    author: "Alexei Borodin",
-    image: {
-      desktop: "/assets/stories/desktop/18-days-voyage.jpg",
-      mobile: "/assets/stories/mobile/18-days-voyage.jpg",
-    },
-  },
-  {
-    title: "Architecturals",
-    author: "Samantha Brooke",
-    image: {
-      desktop: "/assets/stories/desktop/architecturals.jpg",
-      mobile: "/assets/stories/mobile/architecturals.jpg",
-    },
-  },
-];
 
 function HomeStories() {
   useGSAP(() => {
