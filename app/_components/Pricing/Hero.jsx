@@ -27,7 +27,7 @@ function Hero() {
     <main className="flex h-[490px] w-full m-auto  ">
       <div className="bg-black h-[490px] md:w-[61%] lg:w-[45%]  relative hero opacity-0 scale-0 ">
         <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] md:top-[36%] lg:top-[37%] h-36 absolute "></div>
-        <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
+        <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start mx-auto h-full">
           <div className="flex flex-col gap-[0.6em]">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-white ">
               pricing

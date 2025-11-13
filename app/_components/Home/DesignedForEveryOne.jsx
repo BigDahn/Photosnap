@@ -95,7 +95,7 @@ function DesignedForEveryOne() {
 
       <div ref={ImageRef} className="relative  md:min-w-[39%] lg:min-w-[55%] ">
         <Image
-          src="/assets/home/tablet/designed-for-everyone.jpg"
+          src="/assets/home/desktop/designed-for-everyone.jpg"
           alt="hero"
           quality={100}
           className="object-cover 2xl:object-cover lg:block md:hidden "

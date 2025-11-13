@@ -9,14 +9,36 @@ import {
 } from "react-icons/ri";
 function Footer() {
   return (
-    <footer className=" py-[3em] bg-black min-h-[14em]">
-      <section className="max-w-[1110px] py-[0.2em] h-[130px]  flex m-auto justify-between items-center  ">
+    <footer className="  bg-black  h-[200px]  ">
+      <section className="max-w-[1110px] py-[2em]  flex  h-full  m-auto justify-between md:px-[3em] lg:px-1 items-center ">
         <div className="flex gap-[6em]  h-full">
           <div className="flex flex-col justify-between cursor-pointer">
-            <Logo
-              style="w-auto h-auto "
-              file="/assets/shared/desktop/footer-logo.svg"
-            />
+            <div className="flex flex-col gap-[1.3em]">
+              <Logo
+                style="w-auto h-auto "
+                file="/assets/shared/desktop/footer-logo.svg"
+              />
+              <ul className="flex gap-[1em] lg:hidden  text-white  font-bold uppercase text-[12px] tracking-[2px] justify-between ">
+                <Link href="/">
+                  <li className="hover:text-white/55 cursor-pointer">home</li>
+                </Link>
+                <Link href="/stories">
+                  <li className="hover:text-white/55 cursor-pointer">
+                    stories
+                  </li>
+                </Link>
+                <Link href="/features">
+                  <li className="hover:text-white/55 cursor-pointer">
+                    features
+                  </li>
+                </Link>
+                <Link href="/pricing">
+                  <li className="hover:text-white/55 cursor-pointer">
+                    pricing
+                  </li>
+                </Link>
+              </ul>
+            </div>
             <div className="flex gap-3 items-center">
               <div className="w-5 h-5 bg-white flex items-start justify-end rounded-full hover:bg-[linear-gradient(27deg,#63AFDB_0%,#6028F1_100%)]">
                 <RiFacebookFill size={25} color="black" />
@@ -36,7 +58,7 @@ function Footer() {
             </div>
           </div>
 
-          <ul className="flex flex-col text-white  font-bold uppercase text-[12px] tracking-[2px] justify-between ">
+          <ul className=" hidden lg:flex lg:flex-col text-white  font-bold uppercase text-[12px] tracking-[2px] justify-between ">
             <Link href="/">
               <li className="hover:text-white/55 cursor-pointer">home</li>
             </Link>
@@ -66,3 +88,7 @@ function Footer() {
 }
 
 export default Footer;
+
+// flex
+
+// min-h-[285px] lg:min-h-[14em]
