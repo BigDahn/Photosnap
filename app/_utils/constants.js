@@ -200,3 +200,27 @@ export const wholeStory = [
     },
   },
 ];
+
+export const details = [
+  {
+    option: "basic",
+    details:
+      "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+    isPicked: false,
+    price: 19.0,
+  },
+  {
+    option: "pro",
+    details:
+      "More advanced features available. Recommended for photography veterans and professionals.",
+    isPicked: true,
+    price: 39.0,
+  },
+  {
+    option: "business",
+    details:
+      "Additional features available such as more detailed metrics. Recommended for business owners.",
+    isPicked: false,
+    price: 99.0,
+  },
+];

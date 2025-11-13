@@ -1,5 +1,7 @@
+"use client";
+
 import Button from "@/app/_ui/Button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Cards({ details, isYearly }) {
   const [updatedDetails, setUpdatedDetails] = useState(details);
@@ -29,8 +31,8 @@ function Cards({ details, isYearly }) {
             key={index}
             className={`${
               isPicked
-                ? " bg-black h-[470px] w-[350px] relative flex flex-col items-center py-[4.6em] gap-[2.4em]"
-                : "w-[350px] h-[407px] bg-[#F5F5F5]  flex flex-col items-center py-[3em] gap-[2.4em] "
+                ? " bg-black h-[470px] w-[350px] relative flex flex-col items-center py-[4.6em] gap-[2.4em] transition ease-linear duration-300 "
+                : "w-[350px] h-[407px] bg-[#F5F5F5]  flex flex-col items-center py-[3em] gap-[2.4em]  duration-300 transition ease-linear "
             }`}
           >
             {isPicked && (
@@ -50,7 +52,7 @@ function Cards({ details, isYearly }) {
               <p
                 className={`${
                   isPicked
-                    ? "font-normal text-[15px] leading-[25px] text-white/50 text-center"
+                    ? "font-normal text-[15px] leading-[25px] text-white/50 text-center "
                     : "font-normal text-[15px] leading-[25px] text-black/20 text-center"
                 }`}
               >
@@ -82,8 +84,8 @@ function Cards({ details, isYearly }) {
             <Button
               style={`${
                 isPicked
-                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85"
-                  : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black"
+                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100"
+                  : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100"
               }`}
               click={() => changeDetails(option)}
             >

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-function CompareItems({ feature, basic, pro, business }) {
+function CompareItems({ feature, basic, pro, business, className }) {
   return (
-    <main className="grid grid-cols-[26rem_1fr_1fr_1fr] gap-x-[2em] justify-items-center border-b border-solid border-[#DFDFDF] pb-6  uppercase ">
+    <main className={className}>
       <h3 className="text-[12px] font-bold tracking-[2px] justify-self-start uppercase">
         {feature}
       </h3>
