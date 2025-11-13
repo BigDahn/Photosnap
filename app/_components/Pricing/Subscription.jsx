@@ -3,6 +3,12 @@
 import ToggleBtn from "@/app/_ui/ToggleBtn";
 import React, { useState } from "react";
 import Cards from "./Cards";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const details = [
   {
@@ -29,9 +35,26 @@ const details = [
 ];
 
 function Subscription() {
+  const container = useRef();
   const [isYearly, setIsYearly] = useState(false);
+
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          markers: true,
+        },
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <main className="m-auto flex flex-col gap-[2em] items-center justify-center py-[8em]  max-w-[1110px] ">
+    <main
+      ref={container}
+      className="m-auto flex flex-col gap-[2em] items-center justify-center py-[8em]  max-w-[1110px] "
+    >
       <div className="flex gap-[2em] items-center">
         <h3
           className={
