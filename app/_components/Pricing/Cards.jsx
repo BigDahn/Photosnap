@@ -23,7 +23,7 @@ function Cards({ details, isYearly }) {
     setUpdatedDetails(newDetail);
   }
   return (
-    <main className="flex gap-[1.7em] items-center ">
+    <main className="flex md:flex-col lg:flex-row gap-[1.7em] w-full px-[2em] lg:items-center  ">
       {updatedDetails.map((detail, index) => {
         const { option, details, isPicked, price } = detail;
         return (
@@ -31,12 +31,12 @@ function Cards({ details, isYearly }) {
             key={index}
             className={`${
               isPicked
-                ? " bg-black h-[470px] w-[350px] relative flex flex-col items-center py-[4.6em] gap-[2.4em] transition ease-linear duration-300 "
-                : "w-[350px] h-[407px] bg-[#F5F5F5]  flex flex-col items-center py-[3em] gap-[2.4em]  duration-300 transition ease-linear "
+                ? " bg-black md:h-[270px] lg:h-[470px] w-full lg:w-[350px] relative flex flex-row px-[2em] items-start justify-between lg:flex-col lg:items-center py-[4.6em] gap-[2.4em] transition ease-linear duration-300 "
+                : "lg:w-[350px] w-full md:h-[270px] lg:h-[407px] bg-[#F5F5F5]  flex flex-row lg:flex-col items-start justify-between px-[2em] lg:items-center py-[3em] gap-[2.4em]  duration-300 transition ease-linear "
             }`}
           >
             {isPicked && (
-              <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  h-[350px] z-100 absolute rotate-90 inset-0 bottom-full m-auto"></div>
+              <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  h-full lg:h-[350px] z-100  top-0  left-0 absolute lg:rotate-90 lg:inset-0 lg:bottom-full lg:m-auto"></div>
             )}
 
             <div className="max-w-[270px] flex flex-col items-center gap-2">
@@ -58,6 +58,16 @@ function Cards({ details, isYearly }) {
               >
                 {details}
               </p>
+              <Button
+                style={`${
+                  isPicked
+                    ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100  lg:hidden"
+                    : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100 lg:hidden"
+                }`}
+                click={() => changeDetails(option)}
+              >
+                pick plan
+              </Button>
             </div>
 
             <div className="flex flex-col gap-1 justify-center">
@@ -84,8 +94,8 @@ function Cards({ details, isYearly }) {
             <Button
               style={`${
                 isPicked
-                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100"
-                  : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100"
+                  ? "bg-white text-black uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100 hidden lg:block"
+                  : "bg-black text-white uppercase font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100 hidden lg:block"
               }`}
               click={() => changeDetails(option)}
             >

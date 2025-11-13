@@ -8,7 +8,7 @@ import Image from "next/image";
 function FullFeatures() {
   useGSAP(() => {
     gsap.set(".info", {
-      y: 100,
+      y: -100,
       opacity: 0,
     });
 
@@ -26,7 +26,7 @@ function FullFeatures() {
     });
   }, []);
   return (
-    <section className="grid grid-cols-3 gap-x-[1.3em] gap-y-[6em] items-center justify-center py-[10em] max-w-[1110px]  m-auto">
+    <section className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-[3em] lg:gap-x-[1.3em] gap-y-[6em] items-center justify-center py-[10em] max-w-[1110px] md:px-[2.3em] lg:px-0  m-auto">
       {fullFeatures.map((feature, index) => {
         const { title, content, image } = feature;
 
@@ -39,7 +39,7 @@ function FullFeatures() {
                 : index === 1
                 ? "gap-[5em] info opacity-0"
                 : "gap-[1em] info opacity-0"
-            }  h-[236px]    items-center justify-center max-w-[1110px] info opacity-0`}
+            }  h-[236px]    items-center justify-center max-w-[1110px]  info opacity-0`}
           >
             <Image
               src={image}
@@ -51,13 +51,13 @@ function FullFeatures() {
                   ? "h-[72px] w-[72px]"
                   : index === 1
                   ? "h-[36px] w-[72px]"
-                  : "h-[72px] w-[71px]  relative bottom-[13%]"
+                  : "h-[74px] w-[71px]  relative bottom-[13%]"
               }
             />
 
             <div className="flex flex-col items-center justify-end  gap-[1em]  ">
               <h2 className="font-bold text-[18px] leading-[25px]">{title}</h2>
-              <p className=" text-center font-normal text-[15px] leading-[25px] text-black/50">
+              <p className=" text-center font-normal text-[15px] leading-[25px] text-black/50 md:max-w-[340px] ">
                 {content}
               </p>
             </div>

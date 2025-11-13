@@ -36,7 +36,7 @@ function HomeFeatures() {
   return (
     <section
       ref={ScrollRef}
-      className="flex gap-x-[0.7em]  items-center justify-center py-[6em] max-w-[1110px]  m-auto"
+      className="flex flex-col lg:flex-row gap-x-[0.7em] md:gap-[2em] items-center justify-center py-[6em] max-w-[1110px]  m-auto"
     >
       {features.map((feature, index) => {
         const { title, content, image } = feature;
@@ -51,7 +51,7 @@ function HomeFeatures() {
                 : index === 1
                 ? "gap-[5em]"
                 : "gap-[1em]"
-            }  h-[236px]    items-center justify-center max-w-[1110px]`}
+            }  h-[236px]    items-center justify-center md:max-w-[457px] lg:max-w-[1110px]`}
           >
             <Image
               src={image}

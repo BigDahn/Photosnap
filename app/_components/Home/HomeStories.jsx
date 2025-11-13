@@ -29,7 +29,7 @@ function HomeStories() {
   });
 
   return (
-    <main id="stories" className="flex">
+    <main id="stories" className="lg:flex md:grid-cols-2 grid">
       {stories.map((story, i) => {
         const { title, author, image } = story;
         const { desktop, mobile } = image;
@@ -43,7 +43,7 @@ function HomeStories() {
               fill
               className="object-cover brightness-70"
             />
-            <div className="absolute top-[74%] m-auto flex flex-col gap-[1em] justify-start px-[3em] w-full">
+            <div className="absolute top-[74%] m-auto flex flex-col gap-[1em] justify-start md:px-[2em] lg:px-[3em] w-full">
               <div>
                 <h1 className="text-white font-bold text-[18px] leading-[25px]">
                   {title}

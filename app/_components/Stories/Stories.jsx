@@ -46,7 +46,7 @@ function Stories() {
   }, []);
 
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4">
       {wholeStory.map((story, i) => {
         const { title, author, image, date } = story;
         const { desktop, mobile } = image;
@@ -60,7 +60,7 @@ function Stories() {
               fill
               className="object-cover brightness-40"
             />
-            <div className="absolute top-[73%] m-auto flex flex-col gap-[1em] justify-start px-[3em] w-full">
+            <div className="absolute top-[73%] m-auto flex flex-col gap-[1em] justify-start px-[2em] lg:px-[3em] w-full">
               <div>
                 <h3 className="text-white/80 font-medium text-[13px]">
                   {date}

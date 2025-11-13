@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${DMSans.className}  antialiased  `}>
-        <div className="max-w-screen ">
+        <div className="max-w-screen overflow-hidden ">
           <Suspense fallback={<Loading />}>
             <Header />
             {children}

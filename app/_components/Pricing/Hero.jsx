@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import bg from "@/public/assets/pricing/desktop/hero.jpg";
+import tablet from "@/public/assets/pricing/tablet/hero.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -24,8 +25,8 @@ function Hero() {
   }, []);
   return (
     <main className="flex h-[490px] w-full m-auto  ">
-      <div className="bg-black h-[490px] w-[45%] relative hero opacity-0 scale-0 ">
-        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] top-[37%] h-36 absolute "></div>
+      <div className="bg-black h-[490px] md:w-[61%] lg:w-[45%]  relative hero opacity-0 scale-0 ">
+        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] md:top-[36%] lg:top-[37%] h-36 absolute "></div>
         <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
           <div className="flex flex-col gap-[0.6em]">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-white ">
@@ -39,12 +40,20 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative min-w-[55%] img opacity-0 scale-0">
+      <div className="relative md:min-w-[39%] lg:min-w-[55%] img opacity-0 scale-0">
         <Image
           src={bg}
           alt="hero"
           quality={100}
-          className="object-cover"
+          className="object-cover md:hidden lg:block"
+          fill
+          loading="eager"
+        />
+        <Image
+          src={tablet}
+          alt="hero"
+          quality={100}
+          className="object-cover lg:hidden"
           fill
           loading="eager"
         />

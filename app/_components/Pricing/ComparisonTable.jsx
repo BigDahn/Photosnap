@@ -44,7 +44,7 @@ function ComparisonTable() {
     });
   }, []);
   return (
-    <main className="max-w-[1110px] m-auto flex flex-col items-center pt-[3em] pb-[8em] gap-[2em] ">
+    <main className="max-w-[1110px] m-auto flex flex-col items-center pt-[3em] pb-[8em] gap-[2em] px-[3em] ">
       <h1 className="font-bold uppercase text-[40px] leading-12 tracking-[4.17px] opacity-0 items">
         compare
       </h1>

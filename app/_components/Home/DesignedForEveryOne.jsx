@@ -66,7 +66,7 @@ function DesignedForEveryOne() {
 
   return (
     <main ref={ScrollRef} className="flex h-[600px] w-full m-auto  ">
-      <div className=" text-black w-[45%]">
+      <div className=" text-black md:w-[61%] lg:w-[45%]">
         <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
           <div className="flex flex-col gap-[0.6em]">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-black header ">
@@ -93,12 +93,21 @@ function DesignedForEveryOne() {
         </div>
       </div>
 
-      <div ref={ImageRef} className="relative min-w-[55%] ">
+      <div ref={ImageRef} className="relative  md:min-w-[39%] lg:min-w-[55%] ">
         <Image
-          src="/assets/home/desktop/designed-for-everyone.jpg"
+          src="/assets/home/tablet/designed-for-everyone.jpg"
           alt="hero"
           quality={100}
-          className="object-cover 2xl:object-cover "
+          className="object-cover 2xl:object-cover lg:block md:hidden "
+          fill
+          loading="eager"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <Image
+          src="/assets/home/tablet/designed-for-everyone.jpg"
+          alt="hero"
+          quality={100}
+          className="object-cover 2xl:object-cover lg:hidden  "
           fill
           loading="eager"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

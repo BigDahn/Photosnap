@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import bg from "@/public/assets/stories/desktop/moon-of-appalacia.jpg";
+import tablet from "@/public/assets/stories/tablet/moon-of-appalacia.jpg";
 import Link from "next/link";
 
 import { useGSAP } from "@gsap/react";
@@ -23,8 +24,21 @@ function Hero() {
 
   return (
     <div className="relative h-[725px] w-full">
-      <Image src={bg} alt="hero" fill className="object-cover" quality={100} />
-      <div className="max-w-[387px] relative flex flex-col gap-[2em] justify-center ml-[6em] w-full opacity-0 h-full hero">
+      <Image
+        src={bg}
+        alt="hero"
+        fill
+        className="object-cover lg:block md:hidden"
+        quality={100}
+      />
+      <Image
+        src={tablet}
+        alt="hero"
+        fill
+        className="object-cover lg:hidden"
+        quality={100}
+      />
+      <div className="max-w-[387px] relative flex flex-col gap-[2em] justify-center md:ml-[2.4em] lg:ml-[6em] w-full opacity-0 h-full hero">
         <h3 className="font-bold uppercase text-white text-[12px] tracking-[2px]">
           last month&apos;s featured story
         </h3>
