@@ -36,7 +36,7 @@ function HomeFeatures() {
   return (
     <section
       ref={ScrollRef}
-      className="flex flex-col lg:flex-row gap-x-[0.7em] md:gap-[2em] items-center justify-center py-[6em] max-w-[1110px]  m-auto"
+      className="flex flex-col lg:flex-row gap-x-[0.7em] md:gap-[2em] items-center justify-center py-[3em] md:py-[6em] max-w-[318px] md:max-w-[1110px]  m-auto"
     >
       {features.map((feature, index) => {
         const { title, content, image } = feature;
@@ -49,9 +49,9 @@ function HomeFeatures() {
               index === 0
                 ? "gap-[2.6em]"
                 : index === 1
-                ? "gap-[5em]"
-                : "gap-[1em]"
-            }  h-[236px]    items-center justify-center md:max-w-[457px] lg:max-w-[1110px]`}
+                ? " gap-[2em] md:gap-[5em]"
+                : " gap-[2em] md:gap-[1em]"
+            }  h-[236px]    items-center justify-center max-w-[318px] md:max-w-[457px] lg:max-w-[1110px]`}
           >
             <Image
               src={image}
@@ -63,7 +63,7 @@ function HomeFeatures() {
                   ? "h-[72px] w-[72px]"
                   : index === 1
                   ? "h-[36px] w-[72px]"
-                  : "h-[72px] w-[71px]  relative bottom-[13%]"
+                  : "h-[72px] w-[71px]  relative md:bottom-[13%]"
               }
             />
 

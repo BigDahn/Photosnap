@@ -65,22 +65,25 @@ function DesignedForEveryOne() {
   );
 
   return (
-    <main ref={ScrollRef} className="flex h-[600px] w-full m-auto  ">
-      <div className=" text-black md:w-[61%] lg:w-[45%]">
-        <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
+    <main
+      ref={ScrollRef}
+      className="flex flex-col-reverse md:flex-row  h-[600px] w-full m-auto  "
+    >
+      <div className=" py-[2em] text-black h-full w-full md:w-[61%] lg:w-[45%]">
+        <div className=" max-w-[318px] md:max-w-[387px] flex flex-col  gap-5 md:gap-[3em] justify-center items-start m-auto h-full">
           <div className="flex flex-col gap-[0.6em]">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-black header ">
               DESIGNED FOR EVERYONE
             </h2>
             <p className="font-normal text-[15px]  leading-[25px] text-black/80 para">
               Photosnap can help you create stories that resonate with your
-              audience. Our tool is designed for photographers of all levels,
-              brands, businesses you name it.
+              audience. Our tool is designed for photographers of all
+              levels,brands, businesses you name it.
             </p>
           </div>
           <Link
             href="/stories"
-            className="uppercase text-black flex text-[12px] tracking-[2px] font-bold leading-normal gap-[2em] items-center link"
+            className="uppercase text-black flex text-[12px] tracking-[2px]  font-bold leading-normal gap-[2em] items-center link"
           >
             view the stories
             <Image
@@ -93,7 +96,10 @@ function DesignedForEveryOne() {
         </div>
       </div>
 
-      <div ref={ImageRef} className="relative  md:min-w-[39%] lg:min-w-[55%] ">
+      <div
+        ref={ImageRef}
+        className="relative min-w-full h-full  md:min-w-[39%] lg:min-w-[55%] "
+      >
         <Image
           src="/assets/home/desktop/designed-for-everyone.jpg"
           alt="hero"
@@ -107,7 +113,16 @@ function DesignedForEveryOne() {
           src="/assets/home/tablet/designed-for-everyone.jpg"
           alt="hero"
           quality={100}
-          className="object-cover 2xl:object-cover lg:hidden  "
+          className="object-cover 2xl:object-cover lg:hidden hidden md:flex  "
+          fill
+          loading="eager"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <Image
+          src="/assets/home/mobile/designed-for-everyone.jpg"
+          alt="hero"
+          quality={100}
+          className="object-cover 2xl:object-cover md:hidden "
           fill
           loading="eager"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

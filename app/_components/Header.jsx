@@ -22,11 +22,11 @@ function Header() {
   return (
     <header
       ref={container}
-      className="flex py-4 justify-between m-auto md:max-w-screen md:px-[3em] lg:px-1 lg:max-w-[1110px] items-center opacity-0  "
+      className="flex py-4 justify-between m-auto md:max-w-screen px-[3em] lg:px-1 lg:max-w-[1110px] items-center opacity-0  "
     >
       <Logo style="w-auto h-auto" file="/assets/shared/desktop/logo.svg" />
       <NavLinks />
-      <Button style="bg-black text-white h-[40px] w-[158px] cursor-pointer font-bold text-[11px] tracking-[2px] hover:bg-black/20 hover:text-black hover:scale-[1.1] ease-in-out duration-300">
+      <Button style="bg-black hidden md:block text-white h-[40px] w-[158px] cursor-pointer font-bold text-[11px] tracking-[2px] hover:bg-black/20 hover:text-black hover:scale-[1.1] ease-in-out duration-300">
         <Link className="uppercase" href="/invite">
           get an invite
         </Link>

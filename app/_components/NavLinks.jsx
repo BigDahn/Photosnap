@@ -18,7 +18,7 @@ const links = [
 
 function NavLinks() {
   return (
-    <div className="flex items-center gap-6">
+    <div className="md:flex items-center gap-6 hidden">
       {links.map((link, i) => {
         const { name, href } = link;
         return (
