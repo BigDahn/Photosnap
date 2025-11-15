@@ -9,7 +9,7 @@ function Subscription() {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <main className="m-auto flex flex-col gap-[2em] items-center justify-center py-[8em]  max-w-[1110px]">
+    <main className=" m-auto flex flex-col gap-[2em] items-center justify-center py-[8em] max-w-[318px] md:max-w-[1110px]">
       <div className="flex gap-[2em] items-center ">
         <h3
           className={
