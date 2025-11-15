@@ -29,7 +29,7 @@ function HomeStories() {
   });
 
   return (
-    <main id="stories" className="lg:flex md:grid-cols-2 grid">
+    <main id="stories" className="lg:flex md:grid-cols-2 grid py-[2em]">
       {stories.map((story, i) => {
         const { title, author, image } = story;
         const { desktop, mobile } = image;

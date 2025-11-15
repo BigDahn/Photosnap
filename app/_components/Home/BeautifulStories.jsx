@@ -74,7 +74,7 @@ function BeautifulStories() {
         ref={ScrollRef}
         className="flex flex-col-reverse h-[690px] md:h-[600px] w-full m-auto  md:flex-row-reverse box "
       >
-        <div className=" py-[2em] text-black  h-full w-full m-auto  md:w-[61%] lg:w-[45%] ">
+        <div className="  text-black  h-full w-full m-auto  md:w-[61%] lg:w-[45%] ">
           <div className=" max-w-[318px]  md:max-w-[387px] flex flex-col gap-5  md:gap-[3em] justify-center items-start m-auto h-full">
             <div className="flex flex-col gap-[0.6em] box">
               <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-black header">

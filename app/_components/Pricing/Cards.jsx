@@ -36,7 +36,7 @@ function Cards({ details, isYearly }) {
             }`}
           >
             {isPicked && (
-              <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] h-[318.3px] md:h-full lg:h-[336px] z-100  md:top-0  md:left-0 absolute  lg:rotate-90 lg:inset-0 lg:bottom-full lg:m-auto rotate-90 inset-0 bottom-full m-auto"></div>
+              <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] h-[318.3px] md:h-full lg:h-[336px] z-100  md:top-[50%]  md:left-[-100%] absolute  lg:rotate-90 lg:inset-0 lg:bottom-full lg:m-auto rotate-90 inset-0 bottom-full m-auto md:rotate-0"></div>
             )}
 
             <div className="max-w-[270px] flex flex-col items-center gap-[1.3em] lg:gap-2">
@@ -61,8 +61,8 @@ function Cards({ details, isYearly }) {
               <Button
                 style={`${
                   isPicked
-                    ? "bg-white text-black uppercase  outline-none border-none font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100  lg:hidden hidden md:flex"
-                    : "bg-black text-white uppercase outline-none border-none font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100 lg:hidden hidden md:flex"
+                    ? "bg-white text-black uppercase  outline-none border-none font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer hover:bg-white/85 transition ease-linear delay-100  lg:hidden hidden md:block"
+                    : "bg-black text-white uppercase outline-none border-none font-bold text-[12px] tracking-[2px] h-[40px] w-[270px] cursor-pointer  hover:bg-black/10 hover:text-black transition ease-linear delay-100 lg:hidden hidden md:block"
                 }`}
                 click={() => changeDetails(option)}
               >

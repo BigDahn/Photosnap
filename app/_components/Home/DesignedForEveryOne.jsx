@@ -69,16 +69,16 @@ function DesignedForEveryOne() {
       ref={ScrollRef}
       className="flex flex-col-reverse md:flex-row  h-[600px] w-full m-auto  "
     >
-      <div className=" py-[2em] text-black h-full w-full md:w-[61%] lg:w-[45%]">
+      <div className="  text-black h-full w-full md:w-[61%] lg:w-[45%]">
         <div className=" max-w-[318px] md:max-w-[387px] flex flex-col  gap-5 md:gap-[3em] justify-center items-start m-auto h-full">
-          <div className="flex flex-col gap-[0.6em]">
+          <div className="flex flex-col gap-[0.6em] pt-2">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-black header ">
               DESIGNED FOR EVERYONE
             </h2>
             <p className="font-normal text-[15px]  leading-[25px] text-black/80 para">
               Photosnap can help you create stories that resonate with your
-              audience. Our tool is designed for photographers of all
-              levels,brands, businesses you name it.
+              audience. Our tool is designed for photographers of all levels,
+              brands, businesses you name it.
             </p>
           </div>
           <Link
