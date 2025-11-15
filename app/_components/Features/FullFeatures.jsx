@@ -26,7 +26,7 @@ function FullFeatures() {
     });
   }, []);
   return (
-    <section className="grid  md:grid-cols-2 lg:grid-cols-3 md:gap-x-[3em] lg:gap-x-[1.3em] gap-y-[6em] items-center justify-center py-[10em] max-w-[1110px] md:px-[2.3em] lg:px-0  m-auto">
+    <section className="grid  md:grid-cols-2 lg:grid-cols-3 md:gap-x-[3em] lg:gap-x-[1.3em] md:gap-y-[6em] items-center justify-center md:py-[10em] max-w-[318px] md:max-w-[1110px] md:px-[2.3em] lg:px-0 gap-6 py-5 m-auto">
       {fullFeatures.map((feature, index) => {
         const { title, content, image } = feature;
 
@@ -37,9 +37,9 @@ function FullFeatures() {
               index === 0
                 ? "gap-[2.6em] info opacity-0 "
                 : index === 1
-                ? "gap-[5em] info opacity-0"
-                : "gap-[1em] info opacity-0"
-            }  h-[236px]    items-center justify-center max-w-[1110px]  info opacity-0 `}
+                ? "md:gap-[5em] info opacity-0"
+                : "md:gap-[1em] info opacity-0"
+            }  h-[236px]    items-center justify-center max-w-[318px] md:max-w-[1110px]  info opacity-0 `}
           >
             <Image
               src={image}

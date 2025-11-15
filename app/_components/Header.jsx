@@ -22,7 +22,7 @@ function Header() {
   return (
     <header
       ref={container}
-      className="flex py-4 justify-between m-auto md:max-w-screen px-[3em] lg:px-1 lg:max-w-[1110px] items-center opacity-0  "
+      className="flex py-4 justify-between m-auto md:max-w-screen px-[2em] md:px-[3em] lg:px-1 lg:max-w-[1110px] items-center opacity-0  "
     >
       <Logo style="w-auto h-auto" file="/assets/shared/desktop/logo.svg" />
       <NavLinks />

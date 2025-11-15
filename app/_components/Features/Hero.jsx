@@ -3,6 +3,8 @@
 import Image from "next/image";
 import bg from "@/public/assets/features/desktop/hero.jpg";
 import tablet from "@/public/assets/features/tablet/hero.jpg";
+import mobile from "@/public/assets/features/mobile/hero.jpg";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -25,11 +27,11 @@ function Hero() {
   }, []);
 
   return (
-    <main className="flex h-[490px] w-full m-auto overflow-hidden ">
-      <div className="bg-black h-[490px] md:w-[61%] lg:w-[45%] relative features opacity-0">
-        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] md:top-[36%] lg:top-[37%] h-36 absolute "></div>
-        <div className="max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
-          <div className="flex flex-col gap-[0.6em]">
+    <main className="flex flex-col-reverse md:flex-row h-[594px] md:h-[490px] w-full m-auto  ">
+      <div className="bg-black h-[300px] w-full md:h-[490px] md:w-[61%] lg:w-[45%] relative features opacity-0">
+        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] top-[-24%] md:top-[36%] lg:top-[37%] h-36 absolute rotate-90 md:rotate-0  left-[21%] md:left-0  "></div>
+        <div className="   flex flex-col md:gap-[3em] justify-center items-start  px-[1.4em] md:px-[2em] h-full">
+          <div className="flex flex-col gap-[0.6em] max-w-[318px] md:max-w-[387px]">
             <h2 className="font-bold uppercase text-[40px] tracking-[4.17px] leading-12 text-white ">
               features
             </h2>
@@ -41,7 +43,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative md:min-w-[39%] lg:min-w-[55%] img opacity-0">
+      <div className="relative min-w-full h-[294px] md:h-full  md:min-w-[39%] lg:min-w-[55%] img opacity-0">
         <Image
           src={bg}
           alt="hero"
@@ -54,9 +56,18 @@ function Hero() {
           src={tablet}
           alt="hero"
           quality={100}
-          className="object-cover lg:hidden"
+          className="object-cover hidden md:block lg:hidden"
           fill
           loading="eager"
+        />
+        <Image
+          src={mobile}
+          alt="hero"
+          quality={100}
+          className="object-cover block 2xl:object-cover md:hidden "
+          fill
+          loading="eager"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
     </main>

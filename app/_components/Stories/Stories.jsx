@@ -51,16 +51,24 @@ function Stories() {
         const { title, author, image, date } = story;
         const { desktop, mobile } = image;
         return (
-          <div key={i} className="relative h-[500px] w-full items">
+          <div key={i} className="relative h-[375px] md:h-[500px] w-full items">
             <Image
               src={desktop}
               alt={title}
               quality={100}
-              //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               fill
-              className="object-cover brightness-40"
+              className="object-cover brightness-40 hidden md:flex"
             />
-            <div className="absolute top-[73%] m-auto flex flex-col gap-[1em] justify-start px-[2em] lg:px-[3em] w-full">
+            <Image
+              src={mobile}
+              alt={title}
+              quality={100}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              className="object-cover brightness-70 md:hidden"
+            />
+            <div className="absolute top-[63%] md:top-[73%] m-auto flex flex-col gap-[1em] justify-start px-[1.5em] lg:px-[3em] w-full">
               <div>
                 <h3 className="text-white/80 font-medium text-[13px]">
                   {date}
