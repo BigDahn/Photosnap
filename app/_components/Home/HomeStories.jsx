@@ -42,7 +42,7 @@ function HomeStories() {
         return (
           <button
             key={i}
-            className="relative opacity-0 h-[375px] md:h-[500px] w-full img hover:-translate-y-8 transition-all  duration-150 overflow-hidden "
+            className="relative cursor-pointer  opacity-0 h-[375px] md:h-[500px] w-full img hover:-translate-y-8 transition-all  duration-150 overflow-hidden "
             onMouseEnter={() => setIndex(i)}
             onMouseLeave={() => setIndex("")}
           >
@@ -66,7 +66,7 @@ function HomeStories() {
             <div
               className={`${
                 index === i
-                  ? "w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  rotate-90  left-[49.7%] top-[40%] md:top-[49.4%] lg:top-[61%]  h-[120%] md:h-full overflow-hidden lg:h-[77.6%]  absolute  "
+                  ? "w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  rotate-90  left-[49.7%] top-[39.3%] md:top-[49.6%] lg:top-[61%] h-[120%]  md:h-full overflow-hidden lg:h-[77.6%]  absolute  "
                   : "hidden "
               }`}
             ></div>

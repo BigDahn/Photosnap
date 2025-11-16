@@ -77,7 +77,7 @@ function Stories() {
         return (
           <div
             key={i}
-            className="relative h-[375px] md:h-[500px]  w-full items  "
+            className="relative h-[375px] md:h-[500px]  w-full items overflow-hidden cursor-pointer "
             onMouseEnter={() => setIndex(i)}
             onMouseLeave={() => setIndex("")}
           >
@@ -100,7 +100,7 @@ function Stories() {
             <div
               className={`${
                 index === i
-                  ? "w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  rotate-90  left-[49.7%] top-[40%] md:top-[61%] h-[120%]  md:h-[77.6%]  absolute  "
+                  ? "w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  rotate-90  left-[49.7%] top-[40%] md:top-[49.6%] h-[120%] lg:top-[61%] md:h-full  absolute lg:h-[77.6%]  "
                   : "hidden "
               }`}
             ></div>
