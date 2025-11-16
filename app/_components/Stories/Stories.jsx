@@ -6,10 +6,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Stories() {
+  const [index, setIndex] = useState("");
+
   useGSAP(() => {
     gsap.set(".items", { opacity: 0 });
     ScrollTrigger.batch(".items", {
@@ -41,7 +44,28 @@ function Stories() {
           overwrite: true,
         });
       },
+
       once: false, // Only animate once
+    });
+    const items = gsap.utils.toArray(".items");
+
+    items.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        gsap.to(item, {
+          y: -26,
+          duration: 0.4,
+          ease: "power1.inOut",
+        });
+      });
+
+      item.addEventListener("mouseleave", () => {
+        gsap.to(item, {
+          y: 0,
+
+          duration: 0.4,
+          ease: "power1.inOut",
+        });
+      });
     });
   }, []);
 
@@ -51,7 +75,12 @@ function Stories() {
         const { title, author, image, date } = story;
         const { desktop, mobile } = image;
         return (
-          <div key={i} className="relative h-[375px] md:h-[500px] w-full items">
+          <div
+            key={i}
+            className="relative h-[375px] md:h-[500px]  w-full items  "
+            onMouseEnter={() => setIndex(i)}
+            onMouseLeave={() => setIndex("")}
+          >
             <Image
               src={desktop}
               alt={title}
@@ -68,6 +97,13 @@ function Stories() {
               fill
               className="object-cover brightness-70 md:hidden"
             />
+            <div
+              className={`${
+                index === i
+                  ? "w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)]  rotate-90  left-[49.7%] top-[40%] md:top-[61%] h-[120%]  md:h-[77.6%]  absolute  "
+                  : "hidden "
+              }`}
+            ></div>
             <div className="absolute top-[63%] md:top-[73%] m-auto flex flex-col gap-[1em] justify-start px-[1.5em] lg:px-[3em] w-full">
               <div>
                 <h3 className="text-white/80 font-medium text-[13px]">
