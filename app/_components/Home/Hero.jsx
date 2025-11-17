@@ -38,7 +38,7 @@ function Hero() {
         id="hero"
         className="bg-black h-[55%] md:h-full lg:h-[750px]  md:w-[61%] lg:w-[45%] relative opacity-0"
       >
-        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] h-[40%] rotate-90 md:rotate-0  left-[30%] md:left-0 top-[-20%] md:top-[27%] lg:top-[25%] md:h-[304px] absolute "></div>
+        <div className="w-1.5  bg-[linear-gradient(27deg,#FFC593_0%,#BC7198_43.29%,#5A77FF_83.33%)] h-[40%] rotate-90 md:rotate-0  left-[30%] md:left-0 top-[-20%] md:top-[27%] lg:top-[30.5%] md:h-[304px] absolute "></div>
         <div className="  max-w-[318px] md:max-w-[387px] flex flex-col gap-[3em] justify-center items-start m-auto h-full">
           <div className="flex flex-col gap-[0.6em]">
             <h2

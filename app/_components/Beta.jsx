@@ -34,9 +34,18 @@ function Beta() {
           <h1 className="font-bold uppercase text-[32px] md:text-[40px] tracking-[4.17px] leading-12 text-white max-w-[400px] ">
             We’re in beta. Get your invite today!
           </h1>
-          <p className="flex justify-end text-[12px] font-bold tracking-[2px] uppercase text-white">
-            get an invite
-          </p>
+          <div className="flex justify-end gap-[2em]">
+            <p className=" text-[12px] font-bold tracking-[2px] uppercase text-white">
+              get an invite
+            </p>
+            <Image
+              src="/assets/shared/desktop/arrow.svg"
+              alt="arrow"
+              height={12}
+              width={42}
+              style={{ filter: "invert(60%)" }}
+            />
+          </div>
         </div>
       </div>
     </div>

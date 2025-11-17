@@ -7,9 +7,10 @@ import {
   RiPinterestFill,
   RiTwitterFill,
 } from "react-icons/ri";
+import Image from "next/image";
 function Footer() {
   return (
-    <footer className="bg-black border-t-2 border-t-gray-300">
+    <footer className="bg-black ">
       <section className=" max-w-[318px] h-[539px]  md:h-[200px] md:max-w-[1110px] py-[3em] md:py-[2em]  flex flex-col md:flex-row   m-auto gap-[2em]   justify-between  md:px-[3em] lg:px-1 items-center ">
         <div className="flex  flex-col items-center md:flex-row md:gap-[6em] gap-[4em] justify-between md:h-full  ">
           <div className="flex flex-col items-center gap-[2em] h-full md:justify-between cursor-pointer">
@@ -75,9 +76,18 @@ function Footer() {
         </div>
 
         <div className="text-white flex flex-col items-center md:items-start gap-2 md:justify-between md:h-full   ">
-          <h2 className="flex justify-center md:justify-end w-full text-[12px] font-bold tracking-[2px] uppercase">
-            Get an invite
-          </h2>
+          <div className="flex justify-center md:justify-end w-full gap-[2em] ">
+            <h2 className="text-[12px] font-bold tracking-[2px] uppercase">
+              Get an invite
+            </h2>
+            <Image
+              src="/assets/shared/desktop/arrow.svg"
+              alt="arrow"
+              height={12}
+              width={42}
+              style={{ filter: "invert(60%)" }}
+            />
+          </div>
           <p className="text-[15px] font-normal text-white/55">
             Copyright 2019. All Rights Reserved
           </p>
