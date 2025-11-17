@@ -9,7 +9,7 @@ import {
 } from "react-icons/ri";
 function Footer() {
   return (
-    <footer className="bg-black ">
+    <footer className="bg-black border-t-2 border-t-gray-300">
       <section className=" max-w-[318px] h-[539px]  md:h-[200px] md:max-w-[1110px] py-[3em] md:py-[2em]  flex flex-col md:flex-row   m-auto gap-[2em]   justify-between  md:px-[3em] lg:px-1 items-center ">
         <div className="flex  flex-col items-center md:flex-row md:gap-[6em] gap-[4em] justify-between md:h-full  ">
           <div className="flex flex-col items-center gap-[2em] h-full md:justify-between cursor-pointer">

@@ -16,17 +16,13 @@ const links = [
   },
 ];
 
-function NavLinks() {
+function NavLinks({ className, textStyle, onClick }) {
   return (
-    <div className="md:flex items-center gap-6 hidden">
+    <div className={className}>
       {links.map((link, i) => {
         const { name, href } = link;
         return (
-          <Link
-            key={i}
-            href={href}
-            className="uppercase text-[12px] font-bold tracking-[2px] hover:text-black/50 hover:scale-[1.2] duration-200"
-          >
+          <Link key={i} href={href} className={textStyle} onClick={onClick}>
             {name}
           </Link>
         );
